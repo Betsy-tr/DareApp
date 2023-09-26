@@ -16,7 +16,7 @@ const ResetPlayer = () => {
 
   return (
     <View>
-      <Button onPress={reset}>Vider la liste</Button>
+      <Button onPress={reset} >Vider la liste</Button>
     </View>
   )
 }

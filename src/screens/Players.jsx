@@ -6,6 +6,7 @@ import ItemPlayer from '../component/player/ItemPlayer'
 import EmptyPlayer from '../component/player/EmptyPlayer'
 import AddPlayer from '../component/player/AddPlayer'
 import ResetPlayer from '../component/player/ResetPlayer'
+import StartGame from '../component/game/StartGame'
 
 const Players = () => {
 
@@ -21,6 +22,7 @@ const Players = () => {
         ListEmptyComponent={EmptyPlayer} // Quand la liste est vide, on appelle le composant Empty pour indiquer qu'il n'y a pas de joueurs 
         ListHeaderComponent={AddPlayer} // Appel du composant header pour l'ajout des joueurs 
       />
+      <StartGame/>
       <ResetPlayer/>
     </View>
   )

@@ -2,7 +2,14 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initState = {
 
-    players:[],
+    players:[
+
+        {id: 1 , name: 'Betsy'},
+        {id: 2 , name: 'Anne'},
+        {id: 3 , name: 'Ludmilla'},
+        {id: 4 , name: 'Alyss-Aëlle'},
+
+    ],
     position:0,
 
 }
@@ -39,8 +46,17 @@ export const player = createSlice({
 
             return initState ;
         }, 
+
+        nextPlayer:(state , action)=>{ // Passer au joueur suivant
+
+            console.log("action.payload" , action.payload)
+
+            const newState = {...state , position: action.payload}
+
+            return newState ;
+        },
     }
 })
 
-export const { addPlayer , delPlayer , resetPlayer } = player.actions 
+export const { addPlayer , delPlayer , resetPlayer , nextPlayer } = player.actions 
 export default player.reducer
