@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
 import { nextPlayer } from '../../redux/player'
 
-const NextPlayer = () => {
+const NextPlayer = ({id}) => {
 
     const dispatch = useDispatch()
 
@@ -25,7 +25,7 @@ const NextPlayer = () => {
 
         }
 
-        navigation.navigate('TruthOrDare')
+        navigation.navigate('TruthOrDare' , {id: id})
     }
 
   return (

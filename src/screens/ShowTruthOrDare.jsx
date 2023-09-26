@@ -3,7 +3,9 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import NextPlayer from '../component/player/NextPlayer'
 
-const ShowTruthOrDare = ({navigation}) => {
+const ShowTruthOrDare = ({navigation , route}) => {
+
+  const {id} = route.params
 
   const { players , position } = useSelector(state=>state.player)
 
@@ -11,7 +13,7 @@ const ShowTruthOrDare = ({navigation}) => {
     <View>
 
       <Text>{players[position].name}</Text>
-      <NextPlayer/>
+      <NextPlayer id={id}/>
     
     </View>
   )
