@@ -6,7 +6,7 @@ import { Button } from 'react-native-paper'
 const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Button onPress={() => navigation.navigate('Players')}>Ajouter des joueurs</Button>
+      <Button mode='elevated' onPress={() => navigation.navigate('Players')}>Ajouter des joueurs</Button>
     </View>
   )
 }

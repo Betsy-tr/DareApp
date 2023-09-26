@@ -6,6 +6,10 @@ export default  StyleSheet.create({
       margin:10,
       marginTop: StatusBar.currentHeight || 0,
     },
+    modal:{
+      backgroundColor: 'white', 
+      padding: 20
+    },
     item: {
       backgroundColor: '#f9c2ff',
       padding: 10,
