@@ -45,7 +45,6 @@ const Category = ({navigation}) => {
         data={categories}
         renderItem={({item})=><ItemCategory category={item} />}
         keyExtractor={item=>item.id}
-        showDoneButton={false}
       />
       <Button mode='elevated' onPress={()=>navigation.navigate('TruthOrDare')}>NEXT</Button>
     
