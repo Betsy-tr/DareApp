@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { ImageBackground, Text, View } from 'react-native';
 import { List } from 'react-native-paper';
 import styles from '../../styles';
 
@@ -21,6 +21,7 @@ const ItemCategory = ({category}) => {
           <Text style={styles.slideTitle}>{category.name}</Text>
           {/* <Image source={{uri: category.image}} /> */}
           <Text style={styles.slideText}>{category.description}</Text>
+          {/* <ImageBackground></ImageBackground> */}
         </View>
       );
 };
