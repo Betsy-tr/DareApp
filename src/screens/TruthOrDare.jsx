@@ -21,6 +21,8 @@ const TruthOrDare = ({navigation , route}) => {
       <Menu.Item leadingIcon="undo" onPress={goBack} title=""/>
       <Text>Que vas-tu choisir ?😈</Text>
       <Text>{players[position].name}</Text>
+      {/* <Button mode='elevated' onPress={()=>navigation.navigate('ShowTruthOrDare' , {id: id , type:'vérité'})}>VÉRITÉ</Button>
+      <Button mode='elevated' onPress={()=>navigation.navigate('ShowTruthOrDare' , {id: id , type:'action'})}>ACTION</Button> */}
       <Button mode='elevated' onPress={()=>navigation.navigate('ShowTruthOrDare' , {id: id , type:'truth'})}>VÉRITÉ</Button>
       <Button mode='elevated' onPress={()=>navigation.navigate('ShowTruthOrDare' , {id: id , type:'dare'})}>ACTION</Button>
     

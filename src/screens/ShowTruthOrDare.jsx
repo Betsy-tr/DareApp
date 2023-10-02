@@ -7,7 +7,7 @@ import { getRandomInt } from '../commonjs/function'
 
 const ShowTruthOrDare = ({navigation , route}) => {
 
-  const {id} = route.params
+  const {id , type} = route.params
 
   const { players , position } = useSelector(state=>state.player)
 
@@ -17,8 +17,9 @@ const ShowTruthOrDare = ({navigation , route}) => {
 
     // console.log("loadDareOrTruth")
 
-    const dataTruthOrDare = await loadDataDareOrTruth(id)
-    // console.log("dataTruthOrDare" , dataTruthOrDare)
+    const dataTruthOrDare = await loadDataDareOrTruth(id , type)
+    console.log("dataTruthOrDare" , dataTruthOrDare)
+    // console.log('type' , type)
 
     const index = getRandomInt(0 , dataTruthOrDare.length)
     console.log("index" , index)

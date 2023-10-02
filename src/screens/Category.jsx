@@ -16,7 +16,8 @@ const Category = ({navigation}) => {
 
     dispatch(updateLoading())
 
-    const dataCategories = await loadData('categorie')
+    // const dataCategories = await loadData('categorie')
+    const dataCategories = await loadData('category') // base de donnée test
 
     setCategories(dataCategories)
 

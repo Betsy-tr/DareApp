@@ -27,13 +27,19 @@ export const loadData = async (collectionName) => {
  * params(id <string> : id category)
  * 
 ***/ 
-export const loadDataDareOrTruth = async (id) =>{
+export const loadDataDareOrTruth = async (id , type) =>{
 
-    console.log("loadDataDareOrTruth" , id)
+    console.log("loadDataDareOrTruth" , id , type)
 
+    /* const snapShot = await firestore()
+                             .collection("DareOrTruth")
+                             .where("categorie" , "==" , id) // Sélection en fonction de la categorie
+                             .where('type' , "==" , type)
+                             .get() */
     const snapShot = await firestore()
-                            .collection("DareOrTruth")
-                            .where("categorie" , "==" , id) // Sélection en fonction de la categorie
+                            .collection("TruthOrDare")
+                            .where("category" , "==" , id) // Sélection en fonction de la categorie
+                            .where('type' , "==" , type)
                             .get()
 
     // Vérification des données
