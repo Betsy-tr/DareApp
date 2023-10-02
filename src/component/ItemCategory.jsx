@@ -21,7 +21,6 @@ const ItemCategory = ({category}) => {
           <Text style={styles.slideTitle}>{category.name}</Text>
           {/* <Image source={{uri: category.image}} /> */}
           <Text style={styles.slideText}>{category.description}</Text>
-          {/* <ImageBackground></ImageBackground> */}
         </View>
       );
 };
