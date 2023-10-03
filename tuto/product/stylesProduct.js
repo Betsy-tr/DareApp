@@ -25,4 +25,7 @@ export const stylesProduct = StyleSheet.create({
         color: 'white',
         fontWeight: "500"
     },
+    contentButtonFilter:{
+        flexDirection:'row'
+    }
 })

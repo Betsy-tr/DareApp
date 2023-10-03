@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import { store } from './redux/store'
 import ProductData from './product/ProductData'
 import ProductStore from './product/ProductStore'
+import ProductFireStore from './product/ProductFireStore'
 
 const Tuto = () => {
   return (
@@ -16,6 +17,7 @@ const Tuto = () => {
         {/* <CategoryStore /> */}
         {/* <ProductData/> */}
         <ProductStore/>
+        {/* <ProductFireStore/> */}
       </View>
     </Provider>
  
