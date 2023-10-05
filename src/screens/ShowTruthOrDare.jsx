@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux'
 import NextPlayer from '../component/player/NextPlayer'
 import { loadDataDareOrTruth } from '../commonjs/db'
 import { getRandomInt } from '../commonjs/function'
+import ResetGame from '../component/game/ResetGame'
+
 
 const ShowTruthOrDare = ({navigation , route}) => {
 
@@ -41,6 +43,7 @@ const ShowTruthOrDare = ({navigation , route}) => {
       <Text>{players[position].name}</Text>
       <Text> {Showtod?.title} </Text>
       <NextPlayer id={id}/>
+      <ResetGame/>
     
     </View>
   )

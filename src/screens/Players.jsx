@@ -1,7 +1,7 @@
 import { View, Text, FlatList } from 'react-native'
 import React from 'react'
 import { useSelector } from 'react-redux'
-import styles from '../../styles'
+import stylePlayers from '../../stylePlayers'
 import ItemPlayer from '../component/player/ItemPlayer'
 import EmptyPlayer from '../component/player/EmptyPlayer'
 import AddPlayer from '../component/player/AddPlayer'
@@ -14,7 +14,9 @@ const Players = () => {
   
 
   return (
-    <View style={styles.container}>
+    <View style={stylePlayers.container}>
+      <Text style={stylePlayers.title}>JOUEURS</Text>
+      
       <FlatList
         data={players}
         renderItem={({item})=><ItemPlayer player={item}/>}
