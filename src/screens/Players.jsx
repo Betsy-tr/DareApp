@@ -7,6 +7,7 @@ import EmptyPlayer from '../component/player/EmptyPlayer'
 import AddPlayer from '../component/player/AddPlayer'
 import ResetPlayer from '../component/player/ResetPlayer'
 import StartGame from '../component/game/StartGame'
+import LinearGradient from 'react-native-linear-gradient'
 
 const Players = () => {
 
@@ -16,6 +17,7 @@ const Players = () => {
   return (
     <View style={stylePlayers.container}>
       <Text style={stylePlayers.title}>JOUEURS</Text>
+      
       
       <FlatList
         data={players}

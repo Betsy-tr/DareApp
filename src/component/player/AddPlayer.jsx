@@ -29,7 +29,7 @@ const AddPlayer = () => {
   return (
     <>
 
-      <TextInput
+      <TextInput 
 
         label='Nom du joueur'
         value={name}
