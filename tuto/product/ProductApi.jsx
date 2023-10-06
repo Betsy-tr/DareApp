@@ -42,11 +42,11 @@ const ProductApi = () => {
 
         const newProducts = [...products , ...moreProducts]
 
-        setProducts(newProducts)
+        setProducts(newProducts) 
 
         console.log(newProducts)
 
-        setLoadingMore(false)
+        setLoadingMore(false) // Fin du chargement
     }
 
     useEffect(() => {
