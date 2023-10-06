@@ -65,7 +65,7 @@ const ProductApi = () => {
                 renderItem={({item})=><CardProduct product={item}/>}
                 keyExtractor={item => item.id}
                 numColumns={"2"}
-                ListFooterComponent={loadingMore ? <ActivityIndicator animating={true}/> : <Button onPress={more}>More</Button>}
+                ListFooterComponent={loadingMore ? <ActivityIndicator animating={true}/> : <Button onPress={more}>More</Button>} onEndReached={more} onEndReachedThreshold={0.3}
             />
         }
     </View>
