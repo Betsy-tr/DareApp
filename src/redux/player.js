@@ -4,10 +4,10 @@ const initState = {
 
     players:[
 
-        {id: 1 , name: 'Betsy'},
-        {id: 2 , name: 'Anne'},
-        {id: 3 , name: 'Ludmilla'},
-        {id: 4 , name: 'Alyss-Aëlle'},
+        {id: 1 , name: 'Betsy' , tod:[]},
+        {id: 2 , name: 'Anne' , tod:[]},
+        {id: 3 , name: 'Ludmilla' , tod:[]},
+        {id: 4 , name: 'Alyss-Aëlle' , tod:[]},
 
     ],
     position:0,
@@ -55,8 +55,12 @@ export const player = createSlice({
 
             return newState ;
         },
+        updateTod:(state , action)=>{
+            
+            state.players[state.position].tod.push(action.payload)
+        }
     }
 })
 
-export const { addPlayer , delPlayer , resetPlayer , nextPlayer } = player.actions 
+export const { addPlayer , delPlayer , resetPlayer , nextPlayer , updateTod } = player.actions 
 export default player.reducer

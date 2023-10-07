@@ -27,7 +27,7 @@ export const loadData = async (collectionName) => {
  * params(id <string> : id category)
  * 
 ***/ 
-export const loadDataDareOrTruth = async (id , type) =>{
+export const loadDataDareOrTruth = async (id , type , tod) =>{
 
     console.log("loadDataDareOrTruth" , id , type)
 
@@ -40,6 +40,8 @@ export const loadDataDareOrTruth = async (id , type) =>{
                             .collection("TruthOrDare")
                             .where("category" , "==" , id) // Sélection en fonction de la categorie
                             .where('type' , "==" , type)
+                            // .where(firestore.FieldPath.documentId(), 'not-in' , tod)
+                            .where(firestore.FieldPath.documentId(), 'not-in' , ['ok'])
                             .get()
 
     // Vérification des données
@@ -49,7 +51,7 @@ export const loadDataDareOrTruth = async (id , type) =>{
 
             return {id:doc.id , ...doc.data()}
         })
-        return datas ;
+        return datas
 
         
     }else{
