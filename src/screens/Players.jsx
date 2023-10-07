@@ -18,9 +18,9 @@ const Players = () => {
     <View style={stylePlayers.container}>
       
       <ImageBackground
-        resizeMode='scretch'
+        // resizeMode='scretch'
         style={{flex: 1}}
-        width='100%'
+        // width='100%'
         source={require('../pageJoueur.png')}
       >
       

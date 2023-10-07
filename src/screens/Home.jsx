@@ -8,9 +8,9 @@ const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        resizeMode='scretch'
+        // resizeMode='scretch'
         style={{flex: 1}}
-        width='100%'
+        // width='100%'
         source={require('../home.png')}
       >
       {/* <Button mode='elevated' onPress={() => navigation.navigate('Players')}>Ajouter des joueurs</Button> */}
