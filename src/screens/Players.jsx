@@ -1,4 +1,4 @@
-import { View, Text, FlatList } from 'react-native'
+import { View, Text, FlatList , ImageBackground } from 'react-native'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import stylePlayers from '../../stylePlayers'
@@ -16,8 +16,13 @@ const Players = () => {
 
   return (
     <View style={stylePlayers.container}>
-      <Text style={stylePlayers.title}>JOUEURS</Text>
       
+      <ImageBackground
+        resizeMode='scretch'
+        style={{flex: 1}}
+        width='100%'
+        source={require('../pageJoueur.png')}
+      >
       
       <FlatList
         data={players}
@@ -25,9 +30,11 @@ const Players = () => {
         keyExtractor={item=>item.id}
         ListEmptyComponent={EmptyPlayer} // Quand la liste est vide, on appelle le composant Empty pour indiquer qu'il n'y a pas de joueurs 
         ListHeaderComponent={AddPlayer} // Appel du composant header pour l'ajout des joueurs 
+        style={{marginTop: 25}}
       />
       <StartGame/>
       <ResetPlayer/>
+      </ImageBackground>
     </View>
   )
 }

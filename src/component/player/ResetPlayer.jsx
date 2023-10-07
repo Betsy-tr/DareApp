@@ -1,8 +1,9 @@
-import { View, Text } from 'react-native'
+import { View, Text , TouchableOpacity , Image } from 'react-native'
 import React from 'react'
 import { Button } from 'react-native-paper'
 import { useDispatch } from 'react-redux'
 import { resetPlayer } from '../../redux/player'
+import stylePlayers from '../../../stylePlayers'
 
 const ResetPlayer = () => {
 
@@ -16,7 +17,10 @@ const ResetPlayer = () => {
 
   return (
     <View>
-      <Button onPress={reset} >Vider la liste</Button>
+      {/* <Button onPress={reset} >Vider la liste</Button> */}
+      <TouchableOpacity style={stylePlayers.button} onPress={reset}> 
+        <Image source={require('../../resetListe.png')} />
+      </TouchableOpacity>
     </View>
   )
 }

@@ -36,6 +36,7 @@ const AddPlayer = () => {
         mode='outlined'
         onChangeText={text=>setName(text)}
         onSubmitEditing={(value)=>send(value.nativeEvent.text)}
+        style={{marginTop : 75}}
 
       />
 

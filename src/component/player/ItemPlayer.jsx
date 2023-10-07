@@ -4,7 +4,7 @@ import { Button, IconButton  } from 'react-native-paper'
 import { useDispatch } from 'react-redux'
 import { delPlayer } from '../../redux/player'
 import stylePlayers from '../../../stylePlayers'
-import Separateur from '../../../stylePlayers'
+// import Separateur from '../../../stylePlayers'
 
 
 const ItemPlayer = ({player}) => {
@@ -17,7 +17,7 @@ const ItemPlayer = ({player}) => {
     
   }
 
-  const Separateur = () => {
+  /* const Separateur = () => {
 
     return <View style={styles.separateur} />;
 
@@ -30,15 +30,19 @@ const ItemPlayer = ({player}) => {
       marginVertical: 1,
       paddingLeft: 20,
     },
-  });
+  });*/
 
   return (
     <View style={stylePlayers.contentPlayer}>
+      <View>
       <Text style={stylePlayers.namePlayer}>{player.name}</Text>
-      <Button labelStyle={{ color : 'white' , fontSize : 15, }} onPress={supprimer}>Effacer</Button>
+      <Button labelStyle={{ color : 'red' , fontSize : 15}} onPress={supprimer}>Effacer</Button>
+      </View>
       
       
-      <Separateur/>
+      
+      
+      {/* <Separateur/> */}
       
     </View>
   )

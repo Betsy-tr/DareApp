@@ -3,9 +3,7 @@ import { StyleSheet  } from "react-native";
 
 export default StyleSheet.create({
     container:{
-        backgroundColor: 'black',
-        height: '100%',
-        width: '100%'
+        flex:1
     },
     title:{
         fontSize: 48,
@@ -24,15 +22,17 @@ export default StyleSheet.create({
         color: 'white'
     },
     namePlayer:{
-        fontSize: 20,
-        color: 'white',
+        fontSize: 15,
+        color: 'blue',
         paddingLeft: 20,
     },
     contentPlayer:{
-        marginTop: 5,
-        paddingBottom: -5,
-        paddingTop: 10
+        marginTop: 40,
     },
+    button:{
+        marginLeft: 45,
+        paddingBottom:10
+    }
     
     
 })
