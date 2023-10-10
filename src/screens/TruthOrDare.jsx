@@ -25,8 +25,8 @@ const TruthOrDare = ({navigation , route}) => {
       >
       
         <Menu.Item leadingIcon="undo" onPress={goBack} title="" style={{borderColor : 'red'}}/>
-        <Text style={{color: 'blue' , fontSize:25 , marginLeft: 55 , marginTop: 110 , fontFamily: 'serif'}}>Que vas-tu choisir ? 😈</Text>
-        <Text style={{color: 'red' , fontSize:35 , marginLeft: 150 , marginTop: 35 , fontFamily: 'serif'}} >{players[position].name}</Text>
+        <Text style={{color: 'blue' , fontSize:25 , textAlign: 'center' , marginTop: 110 , fontFamily: 'serif'}}>Que vas-tu choisir ? 😈</Text>
+        <Text style={{color: 'red' , fontSize:35 , textAlign: 'center' , marginTop: 35 , fontFamily: 'serif'}} >{players[position].name}</Text>
         {/* <Button mode='elevated' onPress={()=>navigation.navigate('ShowTruthOrDare' , {id: id , type:'vérité'})}>VÉRITÉ</Button>
         <Button mode='elevated' onPress={()=>navigation.navigate('ShowTruthOrDare' , {id: id , type:'action'})}>ACTION</Button> */}
 

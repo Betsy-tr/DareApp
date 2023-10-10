@@ -46,10 +46,10 @@ const ShowTruthOrDare = ({navigation , route}) => {
   
 
   return (
-    <View>
+    <View style={{backgroundColor: 'black' , flex: 1}}>
 
-      <Text>{players[position].name}</Text>
-      <Text> {Showtod?.title} </Text>
+      <Text style={{color: 'blue' , fontSize:30  , marginTop: 50 , fontFamily: 'serif' , textAlign: 'center'}}>{players[position].name}</Text>
+      <Text style={{color: 'white' , fontFamily: 'serif' , fontSize:30 , marginLeft: 10 , textAlign: 'center' , marginTop: 70}}> {Showtod?.title} </Text>
       <NextPlayer id={id}/>
       <ResetGame/>
     

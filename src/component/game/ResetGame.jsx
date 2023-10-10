@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text  , TouchableOpacity , Image} from 'react-native'
 import React from 'react'
 import { Button } from 'react-native-paper'
 import { useNavigation } from '@react-navigation/native'
@@ -16,7 +16,11 @@ const ResetGame = () => {
   return (
     <View>
       
-      <Button mode='elevated' onPress={reset}>Quitter la partie</Button>
+      {/* <Button mode='elevated' onPress={reset}>Quitter la partie</Button> */}
+
+      <TouchableOpacity style={{marginTop: 50, marginLeft: 55}} onPress={reset}> 
+        <Image source={require('../../resetPartie.png')} />
+      </TouchableOpacity>
 
     </View>
   )
