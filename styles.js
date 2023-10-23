@@ -19,6 +19,7 @@ export default  StyleSheet.create({
     },
     title: {
       fontSize: 22,
+      fontFamily: "CedarvilleCursive-Regular"
     },
     slide: {
       flex: 1,
